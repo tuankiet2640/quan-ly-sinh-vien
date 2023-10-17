@@ -26,12 +26,17 @@ public class ProductController extends HttpServlet {
         }
 
         switch (action){
-            case "addToCart":
-                //addToCart(productId);
+            case "buy":
+                int productId= Integer.parseInt(req.getParameter("productId"));
+                addToCart(productId);
                 break;
             default:
                 listProduct(req,res);
         }
+    }
+
+    private void addToCart(int productId) {
+
     }
 
     private void listProduct(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {

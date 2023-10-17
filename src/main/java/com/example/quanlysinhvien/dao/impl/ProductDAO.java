@@ -25,15 +25,14 @@ public class ProductDAO implements IProductDAO {
 
             while (rs.next()) {
                 Product product= new Product();
-                product.setProductId(rs.getInt("product_id"));
-                product.setProductName(rs.getString("product_name"));
+                product.setProductId(rs.getInt("id"));
+                product.setProductName(rs.getString("name"));
                 product.setPrice(rs.getFloat("price"));
                 product.setDescription(rs.getString("description"));
                 product.setImageUrl(rs.getString("image_url"));
 
                 products.add(product);
             }
-
 
         } catch(SQLException e){
             e.printStackTrace();

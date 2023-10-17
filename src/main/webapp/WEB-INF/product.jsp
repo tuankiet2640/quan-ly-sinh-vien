@@ -8,7 +8,12 @@
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+    <style>
+        img{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
 </head>
 <body>
 <h2>
@@ -34,7 +39,7 @@
                 <c:out value="${product.price}"></c:out>
             </td>
             <td>
-                <c:out value="${product.imageUrl}"></c:out>
+                <img src="<c:out value="${product.imageUrl}"/>" alt="Product Image"/>
             </td>
             <td>
                 <a href="/product?action=buy&productId=${product.productId}">BUY NOW</a>
